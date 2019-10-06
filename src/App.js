@@ -36,7 +36,7 @@ class App extends Component {
             <Route path="/forgotpassword" component={ForgotPassword}/>
             <Route path="/passwordReset/:token" component={PasswordReset}/>
             <Route path="/administratorDashboard" component={AdminDashboard}/>
-            <PrivateRoute exact path='/profile' component={Profile} isAuthenticated={this.props.currentUser.profile}/>
+            <PrivateRoute path='/profile' component={Profile} isAuthenticated={this.props.currentUser.profile}/>
           </Switch>
         </HashRouter>
       </div>

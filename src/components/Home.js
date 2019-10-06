@@ -88,9 +88,10 @@ class Home extends Component {
   }
 
   LoginRedirect = () => {
-    this.setState({
-      redirectLogin: true,
-    })
+    // this.setState({
+    //   redirectLogin: true,
+    // })
+    window.location.assign('#/login')
   }
 
   handleReceive = () => {
@@ -170,7 +171,7 @@ class Home extends Component {
                       <Arrow title={'What should I bring?'} body={'Student IDs are required. Consider bringing a hacking machine, headphones, and computer peripherals. Feel free to bring your own parts as well but note that soldering is not allowed at Cutie Hack.'} />
                     </div>
                     <div className="secondaryFaq">
-                      <Arrow title={'What if I don\'t know how to code?'} body={'Cutie Hack is a beginner friendly hackathon and open to all skill levels. During the event take the time to checkout workshops and collaborate with others!'} />
+                      <Arrow title={"What if I don't know how to code?""} body={'Cutie Hack is a beginner friendly hackathon and open to all skill levels. During the event take the time to checkout workshops and collaborate with others!'} />
                     </div>
                     <div className="secondaryFaq">
                       <Arrow title={'What if I still have questions?'} body={"Email us at citrushack@gmail.com. We love answering questions!"} />
