@@ -51,8 +51,7 @@
 .borderCutie {
   border-bottom: 3px solid #FCD139;
   width: 35%;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-bottom: 1.5%;
   border-radius: 4px;
 }
 
@@ -66,25 +65,22 @@
   width: 50vw;
   padding-top: 6%;
 }
+
 .about{
-
-display: inline;
-
+  display: inline;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
 .cutieHackHeader{
-display: inline;
-
+  display: inline;
 }
+
 .sec2Text {
   color: white;
   font-size: 1.5em;
   font-weight: 250;
   width: 75%;
-}
-
-.section3 {
-  height: 70vh;
-  width: 100vw;
 }
 
 .noPadding {
@@ -118,11 +114,6 @@ display: inline;
   font-weight: 300;
   font-size: 3.8em;
   letter-spacing: 1.5px;
-}
-
-.sec2Title {
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
 .faqTitle {
@@ -242,7 +233,8 @@ display: inline;
 }
 
 .stats {
-  height: 55vh;
+  padding-top: 15%;
+  height: 70vh;
 }
 
 #justForStats{
@@ -260,6 +252,8 @@ display: inline;
   font-size: 70px;
   font-weight: 300;
   line-height: 40px;
+  -webkit-transition: font-size 0.3s;
+   transition: font-size 0.3s;
 }
 
 .statsHeader:hover {
@@ -284,13 +278,14 @@ display: inline;
 }
 
 .ieee {
-  width: 55%;
+  padding-top: 2.5%;
+  width: 60%;
   -webkit-transition: width 0.3s, height 0.3s;
    transition: width 0.3s, height 0.3s;
 }
 
 .ieee:hover {
-  width: 57%;
+  width: 64%;
 }
 @media screen and (max-width: 414px){
 .homeNav{

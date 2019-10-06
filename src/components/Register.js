@@ -129,9 +129,8 @@ class Registeration extends Component {
         <Animated animationIn="fadeIn" isVisible={true}>
           <form className="formContainer" onSubmit={this.handleSubmit}>
             <div className="outerParent">
-            <div style={{marginLeft: '4%', paddingTop: '4%', marginBottom: '0', display: 'flex'}}>
+            <div style={{marginLeft: '4%', paddingTop: '4%', marginBottom: '0'}}>
               <h1 className="registrationTitle">Cutie Hack Registration</h1>
-              <img className="cutieIconStyle" src={cutieIcon}/>
             </div>
               <div className="formFlex">
                 <div className="firstInner">

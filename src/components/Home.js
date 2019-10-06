@@ -129,19 +129,16 @@ class Home extends Component {
               </div>
           </div>
         </Animated>
-        <ScrollableAnchor id={'section2'}>
           <div className="section2">
             <div className="s1">
               <img data-aos="fade-up" className="section2img" src={cutieIcon}></img>
             </div>
             <div className="s2">
-              <h1 data-aos="fade-up" className="sec2Title"><div className="about">ABOUT</div> <div className="cutieHackHeader">CUTIE HACK</div></h1>
+              <div data-aos="fade-up" className="sec2Title"><div className="about">ABOUT</div> <div className="cutieHackHeader">CUTIE HACK</div></div>
               <div data-aos="fade-right" data-aos-delay="300" className="borderCutie"></div>
               <p data-aos="fade-up" className="sec2Text">Cutie Hack is a 12 hour hackathon hosted at UC Riverside designed for beginners. The hackathon invites students in the Riverside area to collaborate and innovate on projects. We will also be hosting several workshops to enable beginners to learn the skills they need to create a project.  <br></br> <br></br> This year, Cutie Hack is proud to announce that we will be accepting high school students as well!</p>
             </div>
           </div>
-        </ScrollableAnchor>
-        <ScrollableAnchor id={'section3'}>
           <div className="section3">
             <div style={{width: '100%', textAlign: 'center'}}>
               <h1 className="sec3Title">FAQs</h1>
@@ -184,7 +181,6 @@ class Home extends Component {
               </Row>
             </Container>
           </div>
-        </ScrollableAnchor>
         <div className="stats">
           <div id = "justForStats">
             <div className="statsContainer">
@@ -204,7 +200,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <ScrollableAnchor id={'section4'}>
           <div className="section4">
             <div style={{width: '100%', textAlign: 'center'}}>
               <h1 className="sec4Title">ORGANIZERS</h1>
@@ -225,8 +220,6 @@ class Home extends Component {
             </div>
             <img className="homeFooter" src={cutieFooter}></img>
           </div>
-        </ScrollableAnchor>
-        <ScrollableAnchor id={'section5'}>
           <div className="footer">
             <div className="footerWrap">
               <div style={{margin: 'auto'}}>
@@ -243,7 +236,6 @@ class Home extends Component {
               <p className="footerText">© 2019 Cutie Hack</p>
             </div>
           </div>
-        </ScrollableAnchor>
       </div>
     )
   }
