@@ -47,7 +47,7 @@ class ForgotPassword extends Component {
     this.setState({
       loading: true
     })
-    fetch("https://www.cutiehack.io/api/sendResetEmail", {
+    fetch("https://cutie-hack-19.herokuapp.com/api/sendResetEmail", {
       headers: {
         'Content-Type': 'application/json',
       },
