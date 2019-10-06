@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Signup from './components/Signup';
 import Login from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
@@ -32,13 +31,12 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route path="/signup" exact component={Signup}/>
-            <Route path="/login" component={Login}/>
-            <Route path="/register" component={Register}/>
-            <Route path="/ForgotPassword" component={ForgotPassword}/>
-            <Route path="/passwordReset/:token" component={PasswordReset}/>
-            <Route path="/administratorDashboard" component={AdminDashboard}/>
-            <PrivateRoute path='/profile' component={Profile} isAuthenticated={this.props.currentUser.profile}/>
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/register" component={Register}/>
+            <Route exact path="/forgotpassword" component={ForgotPassword}/>
+            <Route exact path="/passwordReset/:token" component={PasswordReset}/>
+            <Route exact path="/administratorDashboard" component={AdminDashboard}/>
+            <PrivateRoute exact path='/profile' component={Profile} isAuthenticated={this.props.currentUser.profile}/>
           </Switch>
         </Router>
       </div>

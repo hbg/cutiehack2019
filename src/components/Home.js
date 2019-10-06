@@ -58,6 +58,7 @@ class Home extends Component {
     this.state = {
       auth: false,
       redirectRegister: false,
+      redirectLogin: false,
       loading: false
     };
   }
@@ -78,9 +79,7 @@ class Home extends Component {
 
   handleClick = () => {
     this.setState({
-      redirectRegister: true,
-      redirectHome: false,
-      redirectLogin: false
+      redirectRegister: true
     })
   }
 

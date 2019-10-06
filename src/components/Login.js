@@ -76,7 +76,7 @@ class Login extends Component {
       return <Redirect push to = "/profile" />
     }
     if (this.state.redirectToForgot) {
-      return <Redirect push to = "/forgotPassword" />
+      return <Redirect push to = "/forgotpassword" />
     }
     return(
       <div className="login">
