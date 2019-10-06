@@ -19,7 +19,7 @@ class PasswordReset extends Component{
     this.setState({
       loading: true
     })
-    fetch("https://www.cutiehack.io/api/passwordReset", {
+    fetch("https://cutie-hack-19.herokuapp.com/api/passwordReset", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
