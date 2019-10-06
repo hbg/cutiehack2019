@@ -4,7 +4,7 @@ import React from 'react';
 export const userPostFetch = (user) => {
   console.log(user)
   return dispatch => {
-    return fetch("https://www.cutiehack.io/api/apply", {
+    return fetch("https://cutie-hack-19.herokuapp.com/api/apply", {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -46,7 +46,7 @@ export const userPostFetch = (user) => {
 
 export const userLoginFetch = (user) => {
   return dispatch => {
-    return fetch("https://www.cutiehack.io/api/login", {
+    return fetch("https://cutie-hack-19.herokuapp.com/api/login", {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -70,7 +70,7 @@ export const getProfileFetch = () => {
   return dispatch => {
     const token = localStorage.token;
     if (token) {
-      return fetch("https://www.cutiehack.io/api/validateToken", {
+      return fetch("https://cutie-hack-19.herokuapp.com/api/validateToken", {
         method: "GET",
         headers: {
           'Content-Type': 'application/json',
