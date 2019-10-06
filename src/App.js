@@ -7,7 +7,7 @@ import PasswordReset from './components/PasswordReset';
 import AdminDashboard from './components/AdminDashboard';
 import ForgotPassword from './components/ForgotPassword';
 import './App.css';
-import { Switch, Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router, Redirect, HashRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
 import { getProfileFetch } from './redux/actions';
 
@@ -28,17 +28,17 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <Router>
+        <HashRouter basename="/">
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route exact path="/login" component={Login}/>
-            <Route exact path="/register" component={Register}/>
-            <Route exact path="/forgotpassword" component={ForgotPassword}/>
-            <Route exact path="/passwordReset/:token" component={PasswordReset}/>
-            <Route exact path="/administratorDashboard" component={AdminDashboard}/>
+            <Route path="/login" component={Login}/>
+            <Route path="/register" component={Register}/>
+            <Route path="/forgotpassword" component={ForgotPassword}/>
+            <Route path="/passwordReset/:token" component={PasswordReset}/>
+            <Route path="/administratorDashboard" component={AdminDashboard}/>
             <PrivateRoute exact path='/profile' component={Profile} isAuthenticated={this.props.currentUser.profile}/>
           </Switch>
-        </Router>
+        </HashRouter>
       </div>
     );
   }
