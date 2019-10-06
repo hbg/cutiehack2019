@@ -33,6 +33,10 @@ class ForgotPassword extends Component {
     window.location.assign('/')
   }
 
+  LoginRedirect = () => {
+    window.location.assign('/login')
+  }
+
   toggleShow = () => {
     this.setState(prevState => ({
       show: !prevState.show
@@ -68,6 +72,7 @@ class ForgotPassword extends Component {
       <div>
         <div style={{paddingLeft: '10px'}}>
           <button className="buttons" onClick={this.HomeRedirect}>HOME</button>
+          <button className="buttons" onClick={this.LoginRedirect}>LOGIN</button>
         </div>
         <Animated animationIn="fadeIn" isVisible={true}>
           <div style={{display: 'flex'}}>

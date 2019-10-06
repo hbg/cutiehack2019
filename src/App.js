@@ -12,13 +12,11 @@ import { Switch, Route, BrowserRouter as Router, Redirect } from 'react-router-d
 import {connect} from 'react-redux';
 import { getProfileFetch } from './redux/actions';
 
-function PrivateRoute ({component: Component, ...rest}) {
+function PrivateRoute ({component: Component, isAuthenticated, ...rest}) {
   return(
-    <Route
-      {...rest}
-      render={(props) => 'false' === 'True'
+    <Route {...rest} render={(props) => isAuthenticated
       ? <Component {...props} />
-      : <Redirect to={{pathname:'/home', state: {from: props.location}}} />}
+      : <Redirect to={{pathname:'/', state: {from: props.location}}} />}
       />
   )
 }
@@ -39,9 +37,8 @@ class App extends Component {
             <Route path="/register" component={Register}/>
             <Route path="/ForgotPassword" component={ForgotPassword}/>
             <Route path="/passwordReset/:token" component={PasswordReset}/>
-            <Route path="/profile" component={Profile}/>
             <Route path="/administratorDashboard" component={AdminDashboard}/>
-            {/*<PrivateRoute path='/profile' component={Profile}/>*/}
+            <PrivateRoute path='/profile' component={Profile} isAuthenticated={this.props.currentUser.profile}/>
           </Switch>
         </Router>
       </div>
