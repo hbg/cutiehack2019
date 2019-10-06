@@ -38,7 +38,7 @@ class Profile extends Component {
 
   getProfile = () => {
       const token = localStorage.token;
-      fetch("https://www.cutiehack.io/api/validateToken", {
+      fetch("https://cutie-hack-19.herokuapp.com/api/validateToken", {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',
