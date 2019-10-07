@@ -1,6 +1,7 @@
 /node_modules*
 # production
 /build
-
+/idea
+.idea/*
 # misc
 .DS_Store

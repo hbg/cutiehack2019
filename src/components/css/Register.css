@@ -190,20 +190,20 @@ input:-webkit-autofill:active {
 
 .firstInner {
   margin-top: 5%;
-  width: 90%;
-  padding-left: 20px;
+  width: 100%;
+  padding-left: 10px;
 }
 
 .secondInner {
   margin-top: 5%;
-  width: 90%;
-  padding-left: 20px;
+  width: 100%;
+  padding-left: 10px;
 }
 
 .secondInner2 {
   margin-top: 3%;
-  width: 90%;
-  padding-left: 20px;
+  width: 100%;
+  padding-left: 10px;
 }
 
 .formFlex {
@@ -241,3 +241,4 @@ input:-webkit-autofill:active {
   display: none;
 }
 }
+/* This is a comment */
