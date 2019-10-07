@@ -34,7 +34,7 @@ export const userPostFetch = (user) => {
   }
 }
 
-export const userLoginFetch = (user) => {
+export const userLoginFetch = (user, handleDispatch) => {
   return dispatch => {
     return fetch("https://cutie-hack-19.herokuapp.com/api/login", {
       headers: {
@@ -45,14 +45,16 @@ export const userLoginFetch = (user) => {
     })
       .then(resp => resp.json())
       .then(resp => {
-        if (resp.message) {
-          console.log(resp.message)
+        if (resp.Message === "Login Successful") {
+          localStorage.setItem("token", resp.jwt)
+          dispatch(loginUser(resp.user));
+          handleDispatch(resp.Message);
         }
         else {
-          localStorage.setItem("token", resp.jwt)
-          dispatch(loginUser(resp.user))
+          handleDispatch(resp.Message);
         }
       })
+      .catch(err => console.log(err))
   }
 }
 
@@ -81,7 +83,7 @@ export const getProfileFetch = () => {
   }
 }
 
-const loginUser = (userObj) => ({
+export const loginUser = (userObj) => ({
   type: 'LOGIN_USER',
   payload: userObj
 })

@@ -37,7 +37,8 @@ class Registeration extends Component {
       show: false,
       showDup: false,
       showSuccess: false,
-      redirectLogin: false
+      redirectLogin: false,
+      isLoading: false
     }
   }
 
@@ -73,10 +74,14 @@ class Registeration extends Component {
         if (resp.Error) {
           console.log(resp)
           this.toggleShowDup();
+          this.setState({
+            isLoading: false
+          })
         }
         else {
           this.setState(prevState => ({
-            showSuccess: !prevState.showSuccess
+            showSuccess: !prevState.showSuccess,
+            isLoading: false
           }));
         }
       })
@@ -84,7 +89,8 @@ class Registeration extends Component {
     }
     else {
       this.setState(prevState => ({
-        show: !prevState.show
+        show: !prevState.show,
+        isLoading: false
       }));
     }
   }
@@ -129,6 +135,9 @@ class Registeration extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    this.setState({
+      isLoading: true
+    })
     this.validateForms();
   }
 
@@ -304,7 +313,7 @@ class Registeration extends Component {
                     </Toast>
                   </div>
                   <div className="buttonStyling">
-                    <Button onClick={this.handleSubmit} className="applyButton">APPLY</Button>
+                    <Button loading={this.state.isLoading} onClick={this.handleSubmit} className="applyButton">APPLY</Button>
                   </div>
                 </div>
               </div>

@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom';
 import Navbar from './Navbar';
 import { Spin, Input, Icon, Button } from 'antd';
 import { Animated } from 'react-animated-css';
+import { Toast } from 'react-bootstrap';
 import './css/Login.css';
 
 const antIcon = <Icon type="loading" className="pwdSpinner" spin />;
@@ -16,7 +17,9 @@ class Login extends Component {
     redirectToProfile: false,
     redirectToRegister: false,
     redirectToForgot: false,
-    loading: false
+    loading: false,
+    errorLogin: "noToast",
+
   }
 
   handleChange = (event) => {
@@ -25,21 +28,53 @@ class Login extends Component {
     });
   }
 
+  toggleShowCred = () => {
+    this.setState({
+      errorLogin: "noToast"
+    })
+  }
+
+  handleDispatch = (Message) => {
+    if (Message === "Login Successful"){
+      this.setState({
+        email: '',
+        password: '',
+        redirectToProfile: true,
+        loading: false
+      })
+    }
+    else {
+      this.setState({
+        loading: false,
+        errorLogin: "displayToast"
+      })
+    }
+  }
+
   handleSubmit = (event) => {
    event.preventDefault()
    this.setState({
      loading: true
    })
-   this.props.userLoginFetch(this.state)
-   .then(resp => {
-     this.setState({
-       email: '',
-       password: '',
-       redirectToProfile: true,
-       loading: false
-     })
-   })
-   .catch(err => console.log(err))
+   this.props.userLoginFetch(this.state, this.handleDispatch)
+   // .then(resp => resp.json())
+   // .then(resp => {
+   //   console.log(resp)
+   //   if (resp.Message === "Login Successful"){
+   //     this.setState({
+   //       email: '',
+   //       password: '',
+   //       redirectToProfile: true,
+   //       loading: false
+   //     })
+   //   }
+   //   else {
+   //     this.setState({
+   //       loading: false,
+   //       errorLogin: "displayToast"
+   //     })
+   //   }
+   // })
   }
 
   handleRegister = () => {
@@ -78,6 +113,9 @@ class Login extends Component {
     if (this.state.redirectToForgot) {
       return <Redirect push to = "/forgotpassword" />
     }
+    if (this.state.loginError) {
+
+    }
     return(
       <div className="login">
         <div className="loginNav"style={{paddingLeft: '10px'}}>
@@ -105,14 +143,24 @@ class Login extends Component {
             <Button onClick={this.handleReset} className="resetText">FORGOT PASSWORD?</Button>
           </div>
         </Animated>
+        <div className={this.state.errorLogin}>
+          <div style={{paddingTop: '2%', width: '20%', margin: 'auto'}}>
+            <Toast onClose={this.toggleShowCred}>
+              <Toast.Header>
+                <strong style={{color: '#F6796E'}} className="mr-auto">Error</strong>
+              </Toast.Header>
+              <Toast.Body style={{color: '#F6796E'}}>Invalid Credentials!</Toast.Body>
+            </Toast>
+          </div>
+        </div>
       </div>
+
     )
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  userLoginFetch: userInfo => dispatch(userLoginFetch(userInfo)),
-
+  userLoginFetch: (userInfo, handleDispatch) => dispatch(userLoginFetch(userInfo, handleDispatch)),
 })
 
 export default connect(null, mapDispatchToProps)(Login);
