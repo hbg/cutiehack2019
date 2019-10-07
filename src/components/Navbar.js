@@ -17,7 +17,7 @@ class Navbar extends Component {
   constructor(props){
     super(props);
     this.state = {
-      redirectToLogin: false,
+      redirectLogin: false,
       redirectToHome: false,
       isTop: true
     }
@@ -37,8 +37,10 @@ class Navbar extends Component {
   }
 
   LoginRedirect = () => {
-    console.log("hello")
-    window.location.assign('/login')
+    //window.location.assign('#/login')
+    this.setState({
+      redirectLogin: true
+    })
   }
 
   HomeRedirect = () => {
@@ -78,6 +80,9 @@ class Navbar extends Component {
     }
     else {
       nav = yesScroll
+    }
+    if (this.state.redirectLogin){
+      return <Redirect push to="/login" />
     }
 
     return(

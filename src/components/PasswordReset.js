@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import { Animated } from 'react-animated-css';
 import { Toast } from 'react-bootstrap';
 import { Spin, Input, Icon, Button } from 'antd';

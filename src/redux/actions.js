@@ -2,9 +2,8 @@ import { Redirect } from 'react-router-dom';
 import React from 'react';
 
 export const userPostFetch = (user) => {
-  console.log(user)
   return dispatch => {
-    return fetch("https://cutie-hack-19.herokuapp.com/api/apply", {
+    return fetch("http://e42cce53.ngrok.io/api/apply", {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -32,15 +31,6 @@ export const userPostFetch = (user) => {
       }),
     })
       .then(resp => resp.json())
-      .then(resp => {
-        if (resp.message) {
-          console.log(resp)
-        }
-        else {
-          console.log(resp)
-        }
-      })
-      .catch(err => console.log(err))
   }
 }
 

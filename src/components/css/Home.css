@@ -182,13 +182,6 @@
   padding-top: 0.5%;
 }
 
-/*
-.footerIcon {
-  color: white !important;
-  font-size: 2em;
-  padding: 20px 40px 20px 40px;
-}
-*/
 .footerIcon, .footerIcon2, .footerIcon3 {
   color: white !important;
   font-size: 1.75em;
@@ -490,25 +483,25 @@
 .sec2Title, .sec3Title, .sec4Title{
   float: center;
   color: white;
-  font-size: 80px;
+  font-size: 60px;
 }
 
 .sec2Text{
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 250;
   width: 75%;
 }
 
 .faqTitle {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   width: 100%;
   padding-bottom: 4px;
 }
 .footerIcon {
   color: white !important;
-  font-size: 50px;
+  font-size: 30px;
   padding: 20px 40px 20px 40px;
 }
 .footerIcon:hover {
@@ -516,7 +509,7 @@
 }
 .footerText {
   color: white;
-  font-size: 35px;
+  font-size: 20px;
 }
 .statsHeader {
   color: white;

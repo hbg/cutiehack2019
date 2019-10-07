@@ -4,6 +4,7 @@ import Hamburger from './Hamburger'
 import { connect } from 'react-redux';
 import { userPostFetch } from '../redux/actions';
 import { Row, Container, Col } from 'react-bootstrap';
+import { Redirect } from 'react-router-dom';
 import { Animated } from 'react-animated-css';
 import { Button, Icon, Input, Checkbox } from 'antd'
 import { Toast } from 'react-bootstrap';
@@ -26,7 +27,7 @@ class Registeration extends Component {
       major: "",
       gender: "",
       date_of_birth: "",
-      ethinicity: "",
+      ethnicity: "",
       phone_number: "",
       dietary_restrictions: "",
       linkedin: "",
@@ -34,7 +35,9 @@ class Registeration extends Component {
       resume: "",
       share_box: false,
       show: false,
-      showSuccess: false
+      showDup: false,
+      showSuccess: false,
+      redirectLogin: false
     }
   }
 
@@ -66,9 +69,18 @@ class Registeration extends Component {
     }
     if (formValidation){
       this.props.userPostFetch(this.state)
-      this.setState(prevState => ({
-        show: !prevState.showSuccess
-      }));
+      .then(resp => {
+        if (resp.Error) {
+          console.log(resp)
+          this.toggleShowDup();
+        }
+        else {
+          this.setState(prevState => ({
+            showSuccess: !prevState.showSuccess
+          }));
+        }
+      })
+      .catch(err => console.log(err))
     }
     else {
       this.setState(prevState => ({
@@ -78,7 +90,9 @@ class Registeration extends Component {
   }
 
   LoginRedirect = () => {
-    window.location.assign('/login')
+    this.setState({
+      redirectLogin: true
+    })
   }
 
   HomeRedirect = () => {
@@ -95,21 +109,21 @@ class Registeration extends Component {
     }))
   }
 
-  handleConduct = () => {
-    this.setState(prevState => ({
-      conduct_box: !prevState.conduct_box
-    }));
-  }
-
   toggleShow = () => {
     this.setState(prevState => ({
       show: !prevState.show
     }))
   }
 
+  toggleShowDup = () => {
+    this.setState(prevState => ({
+      showDup: !prevState.showDup
+    }))
+  }
+
   toggleShowSuccess = () => {
     this.setState(prevState => ({
-      show: !prevState.showSuccess
+      showSuccess: !prevState.showSuccess
     }))
   }
 
@@ -119,6 +133,13 @@ class Registeration extends Component {
   }
 
   render(){
+    let displayOne = this.state.showDup ? "displayDup" : "displayNone";
+    let displaySecond = this.state.show ? "displayEmpty" : "displayNone";
+    let displayThird = this.state.showSuccess ? "displaySuccess" : "displayNone";
+
+    if (this.state.redirectLogin){
+      return <Redirect push to="/login" />
+    }
     return(
         <div className="registerParent">
         <div className="registerNav"style={{paddingLeft: '10px'}}>
@@ -258,7 +279,7 @@ class Registeration extends Component {
               </div>
               <div className="formFlex">
                 <div className="submitInner">
-                  <div className="toastStyling">
+                  <div className={displaySecond}>
                     <Toast show={this.state.show} onClose={this.toggleShow}>
                       <Toast.Header>
                         <strong style={{color: '#F6796E'}} className="mr-auto">Error</strong>
@@ -266,7 +287,15 @@ class Registeration extends Component {
                       <Toast.Body style={{color: '#F6796E'}}>One or more of the fields are empty or incorrect!</Toast.Body>
                     </Toast>
                   </div>
-                  <div className="toastStyling">
+                  <div className={displayOne}>
+                    <Toast show={this.state.showDup} onClose={this.toggleShowDup}>
+                      <Toast.Header>
+                        <strong style={{color: '#F6796E'}} className="mr-auto">Error</strong>
+                      </Toast.Header>
+                      <Toast.Body style={{color: '#F6796E'}}>This user already exists!</Toast.Body>
+                    </Toast>
+                  </div>
+                  <div className={displayThird}>
                     <Toast show={this.state.showSuccess} onClose={this.toggleShowSuccess}>
                       <Toast.Header>
                         <strong style={{color: '#42CAC0'}} className="mr-auto">Success</strong>

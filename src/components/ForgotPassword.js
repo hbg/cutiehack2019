@@ -12,7 +12,8 @@ class ForgotPassword extends Component {
   state={
     email: '',
     show: false,
-    loading: false
+    loading: false,
+    redirectLogin: false
   }
 
   loader = () => {
@@ -34,7 +35,10 @@ class ForgotPassword extends Component {
   }
 
   LoginRedirect = () => {
-    window.location.assign('/login')
+    this.setState({
+      redirectLogin: true
+    })
+    //window.location.assign('/login')
   }
 
   toggleShow = () => {
@@ -68,6 +72,9 @@ class ForgotPassword extends Component {
   }
 
   render(){
+    if (this.state.redirectLogin){
+      return <Redirect push to="/login" />
+    }
     return(
       <div>
         <div style={{paddingLeft: '10px'}}>

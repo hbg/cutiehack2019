@@ -13,7 +13,6 @@
 .cutieIconStyle {
   width: 6%;
   padding: 5px;
-
 }
 
 .imageWrapper {
@@ -168,6 +167,14 @@ input:-webkit-autofill:active {
 .buttonStyling {
   margin: auto;
   margin-top: 2%;
+}
+
+.displayDup, .displayEmpty, .displaySuccess {
+  position: absolute;
+}
+
+.displayNone {
+  display: none;
 }
 
 .toastStyling {
