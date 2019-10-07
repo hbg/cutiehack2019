@@ -123,8 +123,14 @@ class Home extends Component {
                 <h1 className="mainTitle">CUTIE HACK</h1>
                 <div data-aos="fade-right" data-aos-delay="300" className="mainUnderline"></div>
                 <h2 className="mainSubTitle">NOVEMBER 9, 2019</h2>
-                <Button onClick={this.handleClick} className="desktopApply">Apply</Button>
-                <Button onClick={this.handleClick} className="mobileApply">Apply</Button>
+                {this.props.currentUser.profile ?
+                  null
+                  :
+                  <div>
+                  <Button onClick={this.handleClick} className="desktopApply">Apply</Button>
+                  <Button onClick={this.handleClick} className="mobileApply">Apply</Button>
+                  </div>
+                }
               </div>
           </div>
         </Animated>

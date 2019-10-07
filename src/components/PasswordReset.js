@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { Animated } from 'react-animated-css';
 import { Toast } from 'react-bootstrap';
 import { Spin, Input, Icon, Button } from 'antd';
+import './css/PasswordReset.css';
 
 const antIcon = <Icon type="loading" className="pwdSpinner" spin />;
 
@@ -11,9 +12,22 @@ class PasswordReset extends Component{
     super(props)
     this.state = {
       password: '',
-      show: false,
+      show: 'noToastPwdSuccess',
+      showError: 'noToastPwd',
       loading: false
     }
+  }
+
+  toggleShow = () => {
+    this.setState({
+      show: 'noToastPwdSuccess'
+    })
+  }
+
+  toggleShowError = () => {
+    this.setState({
+      showError: 'noToastPwd'
+    })
   }
 
   handleSubmit = () => {
@@ -33,12 +47,25 @@ class PasswordReset extends Component{
       .then(resp => resp.json())
       .then(resp => {
         console.log(resp.user)
-        this.setState({
-          show: true,
-          loading: false
-        })
+        if (resp.Message === "Success"){
+          this.setState({
+            show: 'showToastPwdSuccess',
+            loading: false
+          })
+        }
+        else {
+          this.setState({
+            showError: 'showToastPwd',
+            loading: false
+          })
+        }
+
       })
       .catch(err => console.log(err))
+  }
+
+  HomeRedirect = () => {
+    window.location.assign('/')
   }
 
   loader = () => {
@@ -77,14 +104,26 @@ class PasswordReset extends Component{
             </div>
           </div>
         </Animated>
-        <div className="toastStylingPwd">
-          <Toast show={this.state.show} onClose={this.toggleShow}>
-            <Toast.Header>
-              <strong style={{color: '#42CAC0'}} className="mr-auto">Success</strong>
-            </Toast.Header>
-            <Toast.Body style={{color: '#42CAC0'}}>A reset link has been sent to your email!</Toast.Body>
-          </Toast>
-      </div>
+        <div style={{width: '100%'}} className={this.state.show}>
+          <div style={{width: '20%', margin: 'auto', paddingTop: '2%'}}>
+            <Toast show={true} onClose={this.toggleShow}>
+              <Toast.Header>
+                <strong style={{color: '#42CAC0'}} className="mr-auto">Success</strong>
+              </Toast.Header>
+              <Toast.Body style={{color: '#42CAC0'}}>Password has been successfully reset!</Toast.Body>
+            </Toast>
+          </div>
+        </div>
+        <div style={{width: '100%'}} className={this.state.showError}>
+          <div style={{width: '22%', margin: 'auto', paddingTop: '2%'}}>
+            <Toast show={this.state.showError} onClose={this.toggleShowError}>
+              <Toast.Header>
+                <strong style={{color: '#F6796E'}} className="mr-auto">Error</strong>
+              </Toast.Header>
+              <Toast.Body style={{color: '#F6796E'}}>There was a problem with resetting your password!</Toast.Body>
+            </Toast>
+          </div>
+        </div>
     </div>
 
     )

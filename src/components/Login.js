@@ -57,24 +57,6 @@ class Login extends Component {
      loading: true
    })
    this.props.userLoginFetch(this.state, this.handleDispatch)
-   // .then(resp => resp.json())
-   // .then(resp => {
-   //   console.log(resp)
-   //   if (resp.Message === "Login Successful"){
-   //     this.setState({
-   //       email: '',
-   //       password: '',
-   //       redirectToProfile: true,
-   //       loading: false
-   //     })
-   //   }
-   //   else {
-   //     this.setState({
-   //       loading: false,
-   //       errorLogin: "displayToast"
-   //     })
-   //   }
-   // })
   }
 
   handleRegister = () => {

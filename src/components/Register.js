@@ -47,7 +47,6 @@ class Registeration extends Component {
     let temp2 = this.state.password2;
     let pwdError, firstNameError, lastNameError, conductError = false;
     let formValidation = true;
-
     if (temp1.length === temp2.length){
       for (let i = 0; i < temp1.length; ++i){
         if (temp1[i] != temp2[i]){

@@ -72,6 +72,7 @@ export const getProfileFetch = () => {
         .then(resp => resp.json())
         .then(resp => {
           if (resp.message) {
+            console.log("removing token")
             // An error will occur if the token is invalid.
             localStorage.removeItem("token")
           } else {
@@ -79,6 +80,9 @@ export const getProfileFetch = () => {
           }
         })
         .catch(err => console.log(err))
+    }
+    else {
+      console.log("no token available")
     }
   }
 }
