@@ -500,13 +500,14 @@
   padding-bottom: 4px;
 }
 .footerIcon {
-  color: white !important;
   font-size: 30px;
   padding: 20px 40px 20px 40px;
 }
-.footerIcon:hover {
-  color: #FCD139 !important;
+
+.footerIcon2, .footerIcon3 {
+  font-size: 30px;
 }
+
 .footerText {
   color: white;
   font-size: 20px;

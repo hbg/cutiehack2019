@@ -3,7 +3,7 @@ import React from 'react';
 
 export const userPostFetch = (user) => {
   return dispatch => {
-    return fetch("http://e42cce53.ngrok.io/api/apply", {
+    return fetch("https://cutie-hack-19.herokuapp.com/api/apply", {
       headers: {
         'Content-Type': 'application/json',
       },

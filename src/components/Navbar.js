@@ -19,6 +19,7 @@ class Navbar extends Component {
     this.state = {
       redirectLogin: false,
       redirectToHome: false,
+      redirectProfile: false,
       isTop: true
     }
   }
@@ -53,7 +54,9 @@ class Navbar extends Component {
   }
 
   handleProfile = () => {
-    window.location.assign('/profile')
+    this.setState({
+      redirectProfile: true
+    })
   }
 
   retProfile = () => {
@@ -83,6 +86,9 @@ class Navbar extends Component {
     }
     if (this.state.redirectLogin){
       return <Redirect push to="/login" />
+    }
+    if (this.state.redirectProfile){
+      return <Redirect push to ="/profile" />
     }
 
     return(
