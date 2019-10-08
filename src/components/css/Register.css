@@ -183,8 +183,18 @@ input:-webkit-autofill:active {
 
 @media screen and (max-width: 414px){
 
+/* .applyButton {
+  border: 2px solid red !important;
+  border-radius: 6px !important;
+  background-color: #475768 !important;
+  color: white !important;
+} */
 
-.hamburgerRegister{
+.displayDup, .displayEmpty, .displaySuccess {
+  display: none;
+}
+
+.hamburgerRegister {
   display: none;
 }
 
@@ -241,4 +251,3 @@ input:-webkit-autofill:active {
   display: none;
 }
 }
-/* This is a comment */

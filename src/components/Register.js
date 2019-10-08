@@ -73,14 +73,10 @@ class Registeration extends Component {
         if (resp.Error) {
           console.log(resp)
           this.toggleShowDup();
-          this.setState({
-            isLoading: false
-          })
         }
         else {
           this.setState(prevState => ({
             showSuccess: !prevState.showSuccess,
-            isLoading: false
           }));
         }
       })
@@ -89,9 +85,11 @@ class Registeration extends Component {
     else {
       this.setState(prevState => ({
         show: !prevState.show,
-        isLoading: false
       }));
     }
+    this.setState({
+      isLoading: false
+    })
   }
 
   LoginRedirect = () => {

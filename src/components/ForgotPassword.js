@@ -93,7 +93,7 @@ class ForgotPassword extends Component {
               </div>
               <div className="ForgotPwdBorder"></div>
               <div className="submitField">
-                <Button onClick={this.handleReset} className="submitButton">RESET PASSWORD</Button>
+                <Button onClick={this.handleReset} className="submitButton">SEND LINK</Button>
               </div>
             </div>
           </div>
