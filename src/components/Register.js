@@ -6,11 +6,12 @@ import { userPostFetch } from '../redux/actions';
 import { Row, Container, Col } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 import { Animated } from 'react-animated-css';
-import { Button, Icon, Input, Checkbox } from 'antd'
+import { Button, Icon, Input, Checkbox, Select, Dropdown } from 'antd'
 import { Toast } from 'react-bootstrap';
 import './css/Register.css'
 
 const cutieIcon = require('./assets/Icon.png');
+const { Option } = Select;
 
 class Registeration extends Component {
   constructor(props){
@@ -42,12 +43,33 @@ class Registeration extends Component {
     }
   }
 
+  handleChangeSelect = (value) => {
+    this.setState({
+      level_of_study: value
+    })
+  }
+
+  handleChangeGender = (value) => {
+    this.setState({
+      gender: value
+    })
+  }
+
+  handleChangeGrad = (value) => {
+    this.setState({
+      graduation_year: value
+    })
+  }
+
   validateForms = () => {
     let temp1 = this.state.password1;
     let temp2 = this.state.password2;
     let pwdError, firstNameError, lastNameError, conductError = false;
     let formValidation = true;
-    if (temp1.length === temp2.length){
+    if (this.state.email.length < 5){
+      formValidation = false;
+    }
+    if (temp1.length === temp2.length && temp1.length > 1){
       for (let i = 0; i < temp1.length; ++i){
         if (temp1[i] != temp2[i]){
           pwdError = true;
@@ -139,6 +161,7 @@ class Registeration extends Component {
   }
 
   render(){
+    console.log(this.state.graduation_year)
     let displayOne = this.state.showDup ? "displayDup" : "displayNone";
     let displaySecond = this.state.show ? "displayEmpty" : "displayNone";
     let displayThird = this.state.showSuccess ? "displaySuccess" : "displayNone";
@@ -202,16 +225,27 @@ class Registeration extends Component {
                 </div>
                 <div className="secondInner">
                   <p className="formText">LEVEL OF STUDY *</p>
-                  <div style={{width: '90%'}}>
-                    <Input className="antInputStyling" name="level_of_study" value={this.state.level_of_study} onChange={this.handleChange} placeholder="Level of study" prefix={<Icon type="user" style={{color: 'rgba(255,255,255)'}} />}/>
+                  <div className="selectStyling">
+                    <Select className="overRideSelect" defaultValue="..." style={{ width: '100%', color: 'white' }} onChange={this.handleChangeSelect}>
+                      <Option value="First">First</Option>
+                      <Option value="Second">Second</Option>
+                      <Option value="Third">Third</Option>
+                      <Option value="Fourth+">Fourth+</Option>
+                    </Select>
                   </div>
                 </div>
               </div>
               <div className="formFlex">
                 <div className="secondInner">
                   <p className="formText">GRADUATION YEAR *</p>
-                  <div style={{width: '90%'}}>
-                    <Input className="antInputStyling" name="graduation_year" value={this.state.graduation_year} onChange={this.handleChange} placeholder="Graduation year" prefix={<Icon type="user" style={{color: 'rgba(255,255,255)'}} />}/>
+                  <div className="selectStyling">
+                    <Select className="overRideSelect" defaultValue="..." style={{ width: '100%', color: 'white' }} onChange={this.handleChangeGrad}>
+                      <Option value="2020">2020</Option>
+                      <Option value="2021">2021</Option>
+                      <Option value="2022">2022</Option>
+                      <Option value="2023">2023</Option>
+                      <Option value="2024+">2024+</Option>
+                    </Select>
                   </div>
                 </div>
                 <div className="secondInner">
@@ -224,8 +258,12 @@ class Registeration extends Component {
               <div className="formFlex">
                 <div className="secondInner">
                   <p className="formText">GENDER *</p>
-                  <div style={{width: '90%'}}>
-                    <Input className="antInputStyling" name="gender" value={this.state.gender} onChange={this.handleChange} placeholder="Gender" prefix={<Icon type="team" style={{color: 'rgba(255,255,255)'}} />}/>
+                  <div className="selectStyling">
+                    <Select className="overRideSelect" defaultValue="..." style={{ width: '100%', color: 'white' }} onChange={this.handleChangeGender}>
+                      <Option value="Male">Male</Option>
+                      <Option value="Female">Female</Option>
+                      <Option value="Other">Other</Option>
+                    </Select>
                   </div>
                 </div>
                 <div className="secondInner">

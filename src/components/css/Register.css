@@ -3,6 +3,34 @@
   width: 100vw;
 }
 
+/* .ant-select-selection__rendered {
+  background-color: red !important;
+} */
+.ant-select-arrow {
+  color: white !important;
+}
+
+.selectStyling {
+  width: 90%;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+.ant-select-selection {
+  border: none !important;
+}
+
+.ant-select-selection, .ant-select-selection--single {
+  background-color: transparent !important;
+}
+
+.ant-select-selection:hover {
+  outline: 0 !important;
+}
+
+.ant-select-selection--single:hover {
+  outline: 0 !important;
+}
+
 .formText {
   margin: 0;
   color: #FCD139;
@@ -10,12 +38,28 @@
   padding-bottom: 3%;
 }
 
+.overRideSelect {
+}
+
 .cutieIconStyle {
   width: 6%;
   padding: 5px;
 }
 
-.imageWrapper {
+.iconStylingDrop {
+  float: right;
+  padding-right: 10px;
+}
+
+.overRideDiv {
+  border: 1px solid white;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white !important;
+}
+
+.overRideDrop {
 }
 
 .registerInput {
