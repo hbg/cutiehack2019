@@ -17,6 +17,8 @@ const cutieIcon = require('./assets/cutieHome.png');
 const cutieFooter = require('./assets/cutieFooter.png');
 const acm = require('./assets/acm.png');
 const ieee = require('./assets/ieee.png');
+const volunteer = require('./assets/CUTIE_volunteers.png');
+const mentor = require('./assets/CUTIE_mentors.png');
 const antIcon = <Icon type="loading" className="spinner" spin />;
 
 class Arrow extends Component {
@@ -142,6 +144,30 @@ class Home extends Component {
               <div data-aos="fade-up" className="sec2Title"><div className="about">ABOUT</div> <div className="cutieHackHeader">CUTIE HACK</div></div>
               <div data-aos="fade-right" data-aos-delay="300" className="borderCutie"></div>
               <p data-aos="fade-up" className="sec2Text">Cutie Hack is a 12 hour hackathon hosted at UC Riverside designed for beginners. The hackathon invites students in the Riverside area to collaborate and innovate on projects. We will also be hosting several workshops to enable beginners to learn the skills they need to create a project.  <br></br> <br></br> This year, Cutie Hack is proud to announce that we will be accepting high school students as well!</p>
+            </div>
+          </div>
+          <div className="volunteer">
+            <div className="volunteerLeft">
+              <div data-aos="fade-up" className="sec2Title"><div className="about">LOOKING TO HELP OUT?</div></div>
+              <div data-aos="fade-right" data-aos-delay="300" className="borderVolunteer"></div>
+              <div style={{width: '100%', textAlign: 'center', paddingTop: '2%'}}>
+                <Container fluid className="noPadding">
+                  <Row className="noMarginVolunteer">
+                    <Col className="noPaddingVolunteer">
+                      <a href="https://acmucr.org/">
+                        <img className="vImg1" src={volunteer}></img>
+                        <h1 className="volunteerText">VOLUNTEER</h1>
+                      </a>
+                    </Col>
+                    <Col className="noPaddingVolunteer">
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWj9LKl0m6nxGdV9taf2s-QxbUKdnkN47UwQ-7fG-t2KUwFg/viewform?usp=sf_link">
+                        <img className="vImg2" src={mentor}></img>
+                        <h1 className="volunteerText">MENTOR</h1>
+                      </a>
+                    </Col>
+                  </Row>
+                </Container>
+              </div>
             </div>
           </div>
           <div className="section3">
