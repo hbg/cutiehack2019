@@ -512,6 +512,11 @@
 .about{
   display: block;
 }
+.volunteerText {
+  color: white;
+  font-weight: 300;
+  font-size: 30px; 
+}
 }
 
 @media only screen and (min-width: 1900px) {
