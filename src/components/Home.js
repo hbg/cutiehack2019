@@ -154,7 +154,7 @@ class Home extends Component {
                 <Container fluid className="noPadding">
                   <Row className="noMarginVolunteer">
                     <Col className="noPaddingVolunteer">
-                      <a href="https://acmucr.org/">
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjf33gcqVvxORyFOx2twgwQF-uFWxqDp9lXgiq0AMfsKWtWw/viewform?usp=sf_link">
                         <img className="vImg1" src={volunteer}></img>
                         <h1 className="volunteerText">VOLUNTEER</h1>
                       </a>
