@@ -148,22 +148,28 @@ class Home extends Component {
           </div>
           <div className="volunteer">
             <div className="volunteerLeft">
-              <div data-aos="fade-up" className="sec2Title"><div className="about">LOOKING TO HELP OUT?</div></div>
-              <div data-aos="fade-right" data-aos-delay="300" className="borderVolunteer"></div>
-              <div style={{width: '100%', textAlign: 'center', paddingTop: '2%'}}>
+              <div style={{width: '100%', paddingTop: '2%'}}>
                 <Container fluid className="noPadding">
                   <Row className="noMarginVolunteer">
                     <Col className="noPaddingVolunteer">
+                    <div style={{float: 'right'}}>
+                      <div data-aos="fade-up" className="volunteerTitle">LOOKING TO HELP OUT?</div>
+                      <div data-aos="fade-right" data-aos-delay="300" className="borderVolunteer"></div>
+                    </div>
+                    <div style={{textAlign: 'center'}}>
                       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjf33gcqVvxORyFOx2twgwQF-uFWxqDp9lXgiq0AMfsKWtWw/viewform?usp=sf_link">
                         <img className="vImg1" src={volunteer}></img>
                         <h1 className="volunteerText">VOLUNTEER</h1>
                       </a>
+                    </div>
                     </Col>
                     <Col className="noPaddingVolunteer">
-                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWj9LKl0m6nxGdV9taf2s-QxbUKdnkN47UwQ-7fG-t2KUwFg/viewform?usp=sf_link">
-                        <img className="vImg2" src={mentor}></img>
-                        <h1 className="volunteerText">MENTOR</h1>
-                      </a>
+                      <div style={{textAlign: 'center', paddingTop: '30%'}}>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWj9LKl0m6nxGdV9taf2s-QxbUKdnkN47UwQ-7fG-t2KUwFg/viewform?usp=sf_link">
+                          <img className="vImg2" src={mentor}></img>
+                          <h1 className="volunteerText">MENTOR</h1>
+                        </a>
+                      </div>
                     </Col>
                   </Row>
                 </Container>

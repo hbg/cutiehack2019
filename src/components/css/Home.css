@@ -52,9 +52,7 @@
   font-weight: 300;
 }
 
-.volunteerLeft {
-  padding-left: 5%;
-}
+
 
 .noMarginVolunteer {
 
@@ -157,7 +155,7 @@
   margin-right: 0;
 }
 
-.sec2Title, .sec3Title, .sec4Title {
+.sec2Title, .sec3Title, .sec4Title, .volunteerTitle{
   color: white;
   font-weight: 450;
   font-size: 3.8em;
@@ -515,7 +513,7 @@
 .volunteerText {
   color: white;
   font-weight: 300;
-  font-size: 30px; 
+  font-size: 30px;
 }
 }
 
