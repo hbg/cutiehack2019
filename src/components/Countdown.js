@@ -2,13 +2,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './css/Countdown.css';
-// class timeRemaining extends Component{
-// 	render(){
-// 		return(
-// 			<p id="timeRemaining">time remaining</p>
-// 		)
-// 	}
-// }
 
 class Countdown extends Component {
   constructor(props) {
@@ -86,6 +79,7 @@ class Countdown extends Component {
     const countDown = this.state;
 
     return (
+      <span className="Time-remaining">{'time remaining'}
       <div className="Countdown">
         <span className="Countdown-col">
           <span className="Countdown-col-element">
@@ -116,6 +110,7 @@ class Countdown extends Component {
           </span>
         </span>
       </div>
+      </span>
     );
   }
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 class Live extends Component {
   state = {
 
@@ -11,6 +10,7 @@ class Live extends Component {
       <div>
         hello
       </div>
+      
     )
   }
 
