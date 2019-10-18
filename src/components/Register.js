@@ -118,6 +118,7 @@ class Registeration extends Component {
     this.setState({
       redirectLogin: true
     })
+    //yuh
   }
 
   HomeRedirect = () => {
