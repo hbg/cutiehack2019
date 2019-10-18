@@ -52,12 +52,6 @@
   font-weight: 300;
 }
 
-
-
-.noMarginVolunteer {
-
-}
-
 .mainHeaderContainer {
   text-align: center;
   float: left;
@@ -106,9 +100,13 @@
   display: flex;
 }
 
-.s1, .s2{
+.s1, .s2 {
   width: 50vw;
   padding-top: 6%;
+}
+
+.s3, .s4 {
+  width: 50vw;
 }
 
 .about{
