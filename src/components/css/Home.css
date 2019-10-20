@@ -209,7 +209,7 @@
 .section4 {
   position: relative;
   width: 100vw;
-  height: 120vh;
+  height: 160vh;
 }
 
 .footer {
@@ -267,6 +267,26 @@
   position: absolute;
   width: 100%;
   bottom: 0;
+}
+
+.xyz {
+  width: 30%;
+  -webkit-transition: width 0.3s, height 0.3s;
+   transition: width 0.3s, height 0.3s;
+}
+
+.xyz:hover {
+  width: 32%;
+}
+
+.wolfram {
+  width: 60%;
+  -webkit-transition: width 0.3s, height 0.3s;
+   transition: width 0.3s, height 0.3s;
+}
+
+.wolfram:hover {
+  width: 63%;
 }
 
 .stats {

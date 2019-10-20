@@ -11,7 +11,6 @@ import { connect } from 'react-redux';
 import { Animated } from 'react-animated-css';
 import { Pulse } from 'react-motions';
 import AOS from 'aos';
-import Live from './Live'
 import './css/Home.css';
 
 const cutieIcon = require('./assets/cutieHome.png');
@@ -20,6 +19,8 @@ const acm = require('./assets/acm.png');
 const ieee = require('./assets/ieee.png');
 const volunteer = require('./assets/CUTIE_volunteers.png');
 const mentor = require('./assets/CUTIE_mentors.png');
+const wolfram = require('./assets/wolfram.svg');
+const xyz = require('./assets/xyz.png');
 const antIcon = <Icon type="loading" className="spinner" spin />;
 
 class Arrow extends Component {
@@ -38,7 +39,6 @@ class Arrow extends Component {
   render(){
     return(
       <div>
-        <Live></Live>
         <div className="flex">
           <div className="faqTitle">{this.props.title}</div>
           <Icon onClick={this.toggle} className="arrowIcon" type="down" />
@@ -236,6 +236,23 @@ class Home extends Component {
           </div>
         </div>
           <div className="section4">
+            <div style={{width: '100%', height: '40%', textAlign: 'center'}}>
+              <h1 className="sec4Title">SPONSORS</h1>
+              <Container style={{marginTop: '60px'}}fluid className="noPadding">
+                <Row className="noMarginSponsor">
+                  <Col className="noPaddingSponsor">
+                    <a href="https://www.wolframalpha.com/">
+                      <img className="wolfram" src={wolfram}></img>
+                    </a>
+                  </Col>
+                  <Col className="noPaddingSponsor">
+                    <a href="https://gen.xyz/">
+                      <img className="xyz" src={xyz}></img>
+                    </a>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
             <div style={{width: '100%', textAlign: 'center'}}>
               <h1 className="sec4Title">ORGANIZERS</h1>
               <Container style={{marginTop: '60px'}}fluid className="noPadding">
