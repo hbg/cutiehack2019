@@ -109,7 +109,25 @@
         
     }
 }
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 1200px ) and (min-width: 800px){
+    #mobile-nav {   
+        display: none;
+    }
+    .NavStructure, .NavContainer {   
+        width: 250px;
+    }
+    .title {
+        font-size: 2.15em;
+        margin-bottom: 70px
+    }
+    .Navigation li{
+        height: 1.2em;
+        font-size: 1.8em;
+        letter-spacing: .08em;
+    }
+
+}
+@media screen and (min-width: 1200px) {
     #mobile-nav {   
         display: none;
     }
