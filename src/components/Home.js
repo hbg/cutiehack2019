@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 import { Animated } from 'react-animated-css';
 import { Pulse } from 'react-motions';
 import AOS from 'aos';
+import Live from './Live'
 import './css/Home.css';
 
 const cutieIcon = require('./assets/cutieHome.png');
@@ -37,6 +38,7 @@ class Arrow extends Component {
   render(){
     return(
       <div>
+        <Live></Live>
         <div className="flex">
           <div className="faqTitle">{this.props.title}</div>
           <Icon onClick={this.toggle} className="arrowIcon" type="down" />
