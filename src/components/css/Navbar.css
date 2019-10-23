@@ -33,6 +33,7 @@ a:hover { color:white !important;}
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
+
 .buttons:hover:after {
   width: 100%;
   left: 0;

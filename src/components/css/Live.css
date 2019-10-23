@@ -1,0 +1,49 @@
+.liveSec1 {
+  background: url('../assets/cutiehacklive.svg');
+  height: 100vh;
+  width: 100vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.liveSec2 {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 25vw;
+  background-color: rgba(50, 59, 75, 0.4);
+}
+
+.liveIcon {
+  width: 50%;
+  padding-top: 10%;
+}
+
+.liveNav {
+  text-align: center;
+}
+
+.liveTitle {
+  padding-top: 20px;
+  color: white;
+  text-shadow: 1px 3px 0 #969696, 1px 4px 5px #aba8a8;
+}
+
+.liveSubTitle {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  font-size: 25px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.liveSubTitle:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+}
+
+.liveTitleCont {
+  padding-top: 10%;
+}
