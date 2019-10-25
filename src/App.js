@@ -6,7 +6,6 @@ import Register from './components/Register';
 import PasswordReset from './components/PasswordReset';
 import AdminDashboard from './components/AdminDashboard';
 import ForgotPassword from './components/ForgotPassword';
-import TimeRemaining from './components/TimeRemaining';
 import Live from './components/Live';
 import Schedule from './components/Schedule';
 import './App.css';
@@ -33,7 +32,7 @@ class App extends Component {
       <div className='app'>
         <HashRouter basename="/">
           <Switch>
-            <Route exact path="/" component={TimeRemaining}/>
+            <Route exact path="/" component={Home}/>
             <Route path="/login" component={Login}/>
             <Route path="/register" component={Register}/>
             <Route path="/forgotpassword" component={ForgotPassword}/>

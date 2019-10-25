@@ -10,7 +10,6 @@ import { Row, Container, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { Animated } from 'react-animated-css';
 import { Pulse } from 'react-motions';
-import { Countdown } from './Countdown';
 import AOS from 'aos';
 import Live from './Live'
 import './css/Home.css';

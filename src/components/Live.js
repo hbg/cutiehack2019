@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SideNav from './SideNav';
+import TimeRemaining from './TimeRemaining';
 import { Animated } from 'react-animated-css';
 import './css/Live.css';
 
@@ -18,6 +19,7 @@ class Live extends Component {
           <div>
           </div>
           <SideNav/>
+          <TimeRemaining/>
         </div>
       </Animated>
     )
