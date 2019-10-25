@@ -6,7 +6,7 @@ import Register from './components/Register';
 import PasswordReset from './components/PasswordReset';
 import AdminDashboard from './components/AdminDashboard';
 import ForgotPassword from './components/ForgotPassword';
-import Countdown from './components/Countdown';
+import TimeRemaining from './components/TimeRemaining';
 import Live from './components/Live';
 import './App.css';
 import { Switch, Route, BrowserRouter as Router, Redirect, HashRouter } from 'react-router-dom';
@@ -32,7 +32,7 @@ class App extends Component {
       <div className='app'>
         <HashRouter basename="/">
           <Switch>
-            <Route exact path="/" component={Countdown}/>
+            <Route exact path="/" component={TimeRemaining}/>
             <Route path="/login" component={Login}/>
             <Route path="/register" component={Register}/>
             <Route path="/forgotpassword" component={ForgotPassword}/>
