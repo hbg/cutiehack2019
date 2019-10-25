@@ -8,7 +8,7 @@ class TimeRemaining extends React.Component{
          <div id ="Container">
            <h1 id ="text">time remaining</h1>
            <div id="Countdown">
-           <Countdown date={'2019-11-09T00:00:00'} />
+           <Countdown date={'2019-11-09'} />
            </div>
          </div>
        )
