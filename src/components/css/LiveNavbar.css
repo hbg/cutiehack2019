@@ -1,0 +1,116 @@
+
+.NavStructure{
+    width: 350px;
+    height: 100vh;
+    background-color: white;
+    opacity: .1;
+    right: 0%;
+    position: fixed;
+}
+
+.NavContainer{
+    width: 350px;
+    height: 100vh;
+    right: 0%;
+    position: fixed;
+}
+
+/* .IconContainer {
+    height:25%;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+} */
+
+.icon {
+    width: 67%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 18px;
+
+}
+
+.title {
+    font-size: 3em;
+    color: white;
+    text-shadow: 0px 12px 10px rgba(227, 189, 68, 0.3);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.Navigation {
+    height: 30%;
+    margin-top: 5%;
+}
+
+.Navigation ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Navigation li{
+    height: 1.2em;
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 0;
+    padding: 0%;
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+
+.Navigation li a{
+    color: white;
+}
+
+.Navigation li a:hover{
+    color: rgb(113, 116, 133) !important;
+}
+
+/* .Navigation a :after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: relative;
+    background: #fff;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0%;
+  }
+.Navigation a:hover :after { 
+    width: 100%; 
+    left: 0%; 
+  } */
+
+@media screen and (max-width: 800px) {
+    .NavStructure, .NavContainer {   
+        display: none;
+        
+    }
+    #mobile-nav {   
+        
+        background-color: rgba(255,255,255, 0.1);
+        /* width: 100vh;*/
+        /* height: 10vh; */
+        bottom: 0%;
+        position: fixed;
+    }
+    .mobile-icon{
+        width: 50%;
+		height: auto;
+        margin: 1em 0 1em 0;
+        vertical-align: center;
+        
+    }
+}
+@media screen and (min-width: 800px) {
+    #mobile-nav {   
+        display: none;
+    }
+}

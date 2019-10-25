@@ -1,0 +1,38 @@
+.scheduleBG {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.scheduleLeft {
+  height: 100vh;
+  width: 75vw;
+  display: flex;
+  align-items: center;
+}
+
+.innerSchedule {
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  background-color: #323B4B;
+  border-radius: 10px;
+}
+
+.scheduleSec1 {
+  text-align: center;
+  color: white;
+  padding-top: 2%;
+}
+
+.scheduleSec2 {
+  text-align: center;
+  color: white;
+  padding-top: 2%;
+}
+
+.scheduleSec3 {
+  text-align: center;
+  color: white;
+  padding-top: 2%;
+}

@@ -8,6 +8,7 @@ import AdminDashboard from './components/AdminDashboard';
 import ForgotPassword from './components/ForgotPassword';
 import TimeRemaining from './components/TimeRemaining';
 import Live from './components/Live';
+import Schedule from './components/Schedule';
 import './App.css';
 import { Switch, Route, BrowserRouter as Router, Redirect, HashRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
@@ -39,6 +40,7 @@ class App extends Component {
             <Route path="/passwordreset/:token" component={PasswordReset}/>
             <Route path="/administratorDashboard" component={AdminDashboard}/>
             <Route path="/live" component={Live}/>
+            <Route path="/schedule" component={Schedule}/>
             <PrivateRoute path='/profile' component={Profile} isAuthenticated={this.props.currentUser.profile}/>
           </Switch>
         </HashRouter>

@@ -227,6 +227,7 @@ class Registeration extends Component {
                   <p className="formText">LEVEL OF STUDY *</p>
                   <div className="selectStyling">
                     <Select className="overRideSelect" defaultValue="..." style={{ width: '100%', color: 'white' }} onChange={this.handleChangeSelect}>
+                      <Option value="Highschool">High School</Option>
                       <Option value="First">First</Option>
                       <Option value="Second">Second</Option>
                       <Option value="Third">Third</Option>
@@ -240,6 +241,7 @@ class Registeration extends Component {
                   <p className="formText">GRADUATION YEAR *</p>
                   <div className="selectStyling">
                     <Select className="overRideSelect" defaultValue="..." style={{ width: '100%', color: 'white' }} onChange={this.handleChangeGrad}>
+                      <Option value="Highschool">High School</Option>
                       <Option value="2020">2020</Option>
                       <Option value="2021">2021</Option>
                       <Option value="2022">2022</Option>
