@@ -1,0 +1,32 @@
+.Time-remaining{
+  color: white;
+  margin: auto;
+  width: 50%;
+}
+
+.Countdown{
+  width: 350px;
+  margin: 100px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  background: rgba(255,255,255,0.2);
+  text-align: center;
+  box-shadow: 0px 10px 10px #201e2e;
+
+}
+
+.Countdown-col{
+  display: inline-block;
+}
+
+.Countdown-col-element{
+  display: inline-block;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Countdown-col-element strong{
+  font-size: 25px;
+}
