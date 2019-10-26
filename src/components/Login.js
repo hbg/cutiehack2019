@@ -119,9 +119,6 @@ class Login extends Component {
             <div className="submitField">
               <Button onClick={this.handleSubmit} className="submitButton">LOGIN</Button>
             </div>
-            <div className="submitField">
-              <Button onClick={this.handleRegister} className="submitButton">SIGN UP</Button>
-            </div>
             <Button onClick={this.handleReset} className="resetText">FORGOT PASSWORD?</Button>
           </div>
         </Animated>

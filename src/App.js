@@ -34,7 +34,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/login" component={Login}/>
-            <Route path="/register" component={Register}/>
             <Route path="/forgotpassword" component={ForgotPassword}/>
             <Route path="/passwordreset/:token" component={PasswordReset}/>
             <Route path="/administratorDashboard" component={AdminDashboard}/>
