@@ -13,16 +13,17 @@
 
 .innerSchedule {
   margin: auto;
-  width: 90%;
-  height: 90%;
+  width: 95%;
+  height: 93%;
   background-color: #323B4B;
   border-radius: 10px;
 }
 
 .scheduleSec1 {
-  text-align: center;
   color: white;
   padding-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .scheduleSec2 {
@@ -35,4 +36,37 @@
   text-align: center;
   color: white;
   padding-top: 2%;
+}
+
+.scheduleHeaders {
+  color: white;
+  text-align: center;
+}
+
+.scheduleSection{
+  text-align: center;
+  width: 100%;
+}
+
+.innerLeftSchedule {
+  font-weight: 500;
+  font-size: 16px;
+  float: left;
+}
+
+.innerRightSchedule {
+  float: right;
+  color: #FCD139;
+  padding-top: 1%;
+}
+
+.scheduleLoc {
+  float: left;
+  font-weight: 300;
+  width: 100%;
+}
+
+.scheduleSlot {
+  width: 100%;
+  height: 30%;
 }
