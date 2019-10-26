@@ -1,27 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.a4aa7084.chunk.css",
-    "main.js": "/static/js/main.f61094b6.chunk.js",
-    "main.js.map": "/static/js/main.f61094b6.chunk.js.map",
+    "main.css": "/static/css/main.fcbc533a.chunk.css",
+    "main.js": "/static/js/main.ab7018a0.chunk.js",
+    "main.js.map": "/static/js/main.ab7018a0.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
     "static/css/2.802837ff.chunk.css": "/static/css/2.802837ff.chunk.css",
-    "static/js/2.999f83d7.chunk.js": "/static/js/2.999f83d7.chunk.js",
-    "static/js/2.999f83d7.chunk.js.map": "/static/js/2.999f83d7.chunk.js.map",
+    "static/js/2.1002c982.chunk.js": "/static/js/2.1002c982.chunk.js",
+    "static/js/2.1002c982.chunk.js.map": "/static/js/2.1002c982.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.690455755db30ff218b364ba5410b72e.js": "/precache-manifest.690455755db30ff218b364ba5410b72e.js",
+    "precache-manifest.c6529635cea07de7b0d9efbbf7e8e176.js": "/precache-manifest.c6529635cea07de7b0d9efbbf7e8e176.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.802837ff.chunk.css.map": "/static/css/2.802837ff.chunk.css.map",
-    "static/css/main.a4aa7084.chunk.css.map": "/static/css/main.a4aa7084.chunk.css.map",
+    "static/css/main.fcbc533a.chunk.css.map": "/static/css/main.fcbc533a.chunk.css.map",
     "static/media/CUTIE_mentors.png": "/static/media/CUTIE_mentors.c4500fb6.png",
     "static/media/CUTIE_volunteers.png": "/static/media/CUTIE_volunteers.8e73c391.png",
     "static/media/Icon.png": "/static/media/Icon.293d03e0.png",
     "static/media/acm.png": "/static/media/acm.0859f696.png",
+    "static/media/bIcon.png": "/static/media/bIcon.cfeab280.png",
     "static/media/cutieFooter.png": "/static/media/cutieFooter.f65e5715.png",
     "static/media/cutieHome.png": "/static/media/cutieHome.e595e38e.png",
-    "static/media/Live.css": "/static/media/cutiehacklive.ai.b12018b7.png",
-    "static/media/Home.css": "/static/media/hero.bc966731.png",
-    "static/media/wolfram.svg": "/static/media/wolfram.38657aec.svg",
-    "static/media/xyz.png": "/static/media/xyz.0f543015.png"
+    "static/media/cutiehacklive.svg": "/static/media/cutiehacklive.275cb42a.svg",
+    "static/media/Home.css": "/static/media/hero.bc966731.png"
   }
 }
